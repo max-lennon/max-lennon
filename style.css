@@ -81,9 +81,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-a:visited {
   color: inherit;
 }
 
@@ -101,9 +98,18 @@ a:visited {
   overflow: hidden;
 }
 
+.card:not(.project-card) {
+  padding: 24px;
+}
+
 .project-card {
   display: grid;
   grid-template-rows: auto 1fr;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 35px rgba(56, 189, 248, 0.16);
 }
 
 .project-image {
