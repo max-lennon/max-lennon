@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crowdsourced Sports Analysis | Max Lennon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <main class="hero">
+      <div>
+        <a class="button button-secondary" href="index.html">Back to home</a>
+        <h1>Crowdsourced Sports Analysis</h1>
+        <p>
+          Generating college basketball matchup analyses by synthesizing Reddit fan commentary from team-specific subreddits, creating structured breakdowns grounded in fan perceptions.
+        </p>
+      </div>
+
+      <section class="project-overview">
+        <article class="card">
+          <img class="project-image" src="images\reddit_cbb.png" alt="Duke and UNC athletics logos on opposite sides of the Reddit icon, with basketball diagrams and charts underneath." />
+          <div class="project-details">
+            <h2>Project overview</h2>
+            <p class="tagline">A system that transforms unstructured Reddit discussions into coherent, position-by-position matchup narratives for college basketball games.</p>
+            <ul>
+              <li>Scrapes Reddit comments from team-specific subreddits using PRAW API</li>
+              <li>Stores structured data in PostgreSQL with tables for users, posts, comments, teams, and games</li>
+              <li>Uses ChromaDB vector database with SentenceTransformer embeddings for semantic search</li>
+              <li>Generates matchup analyses with DeepSeek LLM grounded in fan sentiment</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Data gathering process</h2>
+          <p class="tagline">Automated scraping pipeline that collects fan commentary from Reddit's CollegeBasketball subreddit.</p>
+          <div class="keywords">
+            <span class="keyword-chip">PRAW</span>
+            <span class="keyword-chip">Reddit API</span>
+            <span class="keyword-chip">Web Scraping</span>
+            <span class="keyword-chip">Data Collection</span>
+          </div>
+          <p>The scraper parses game thread index posts to identify relevant discussions, then recursively collects comments, user flairs, and metadata. It handles rate limiting and stores data in structured formats for downstream processing.</p>
+        </article>
+
+        <article class="card">
+          <h2>Database design</h2>
+          <p class="tagline">Relational schema optimized for querying fan discussions by team, game, and user context.</p>
+          <div class="keywords">
+            <span class="keyword-chip">PostgreSQL</span>
+            <span class="keyword-chip">SQLAlchemy</span>
+            <span class="keyword-chip">Data Modeling</span>
+            <span class="keyword-chip">Upsert Operations</span>
+          </div>
+          <p>Core tables include users (with flair affiliations), posts, comments (with threading), teams, and games. Foreign key relationships enable efficient joins for retrieving team-specific commentary while handling data conflicts through upsert logic.</p>
+        </article>
+
+        <article class="card">
+          <h2>RAG pipeline</h2>
+          <p class="tagline">Retrieval-augmented generation system that synthesizes fan insights into structured matchup reports.</p>
+          <div class="keywords">
+            <span class="keyword-chip">ChromaDB</span>
+            <span class="keyword-chip">SentenceTransformers</span>
+            <span class="keyword-chip">DeepSeek LLM</span>
+            <span class="keyword-chip">Vector Search</span>
+          </div>
+          <p>Comments are embedded using GTR-T5-XL model and stored in ChromaDB. For matchup queries, relevant fan discussions are retrieved via semantic similarity, then fed to DeepSeek model with structured prompts to generate position-by-position analyses grounded in user sentiment.</p>
+        </article>
+
+        <article class="card">
+          <h2>Results</h2>
+          <p class="tagline">Delivered qualitative scouting reports that capture fan-driven narratives, providing unique insights beyond traditional statistics.</p>
+          <p>Successfully synthesized complex fan discussions into actionable matchup breakdowns, highlighting key battles and concerns that shape pre-game expectations.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Want to explore the fan data pipeline? Reach out at maxlennon7@gmail.com</p>
+      <a class="button button-primary" href="https://github.com/max-lennon/bball_fanbot">View GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>

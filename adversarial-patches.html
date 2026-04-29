@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adversarial Patch Attacks | Max Lennon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <main class="hero">
+      <div>
+        <a class="button button-secondary" href="index.html">Back to home</a>
+        <h1>Adversarial Patch Attacks</h1>
+        <p>
+          Research into physically realizable adversarial attacks on computer vision systems, focusing on patch-based perturbations that can fool models in real-world scenarios.
+        </p>
+      </div>
+
+      <section class="project-overview">
+        <article class="card">
+          <img class="project-image" src="images\stopsign_patch_3.2.png" alt="Example of an adversarial patch on a stop sign" />
+          <div class="project-details">
+            <h2>Project overview</h2>
+            <p class="tagline">A comprehensive study of adversarial patch attacks, from 2D static patches to 3D dynamic attacks on autonomous systems.</p>
+            <ul>
+              <li>Developed semi-transparent patches balancing attack success and visual obtrusiveness</li>
+              <li>Analyzed robustness to geometric transformations (rotation, scale, location)</li>
+              <li>Introduced novel metrics like mean Attack Success over Transformations (mAST)</li>
+              <li>Explored adaptive active attacks (AAA) for 3D kinematic trajectories</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Adversarial patch attacks explained</h2>
+          <p class="tagline">Unlike digital perturbations, patch attacks are physical stickers that can be placed in the real world to fool AI vision systems.</p>
+          <p>Imagine a small, specially designed sticker that, when viewed by a camera, causes an AI model to misclassify what's in the image. Unlike traditional adversarial attacks that require pixel-level modifications to digital images, patch attacks work in the physical world—think of them as "digital camouflage" that exploits vulnerabilities in how AI systems process visual information. These attacks are particularly concerning for autonomous vehicles, where a patch on a stop sign could make it appear as a speed limit sign to the car's computer vision system.</p>
+        </article>
+
+        <article class="card">
+          <h2>2D patch robustness analysis</h2>
+          <p class="tagline">Systematic evaluation of patch attack effectiveness under geometric transformations using the Expectation over Transformation (EoT) framework.</p>
+          <div class="keywords">
+            <span class="keyword-chip">Geometric Transformations</span>
+            <span class="keyword-chip">EoT Framework</span>
+            <span class="keyword-chip">Scale Invariance</span>
+            <span class="keyword-chip">Semi-transparent Patches</span>
+          </div>
+          <p>Analyzed how rotation, scaling, and positioning affect attack success rates. Findings showed that scale has the most significant impact on performance, with training distribution support directly influencing robustness to out-of-distribution transformations.</p>
+        </article>
+
+        <article class="card">
+          <h2>3D patch attacks and trajectories</h2>
+          <p class="tagline">Extending patch attacks to 3D space with adaptive active attacks (AAA) that optimize for observer pose and kinematic motion.</p>
+          <div class="keywords">
+            <span class="keyword-chip">3D Pose</span>
+            <span class="keyword-chip">Kinematic Trajectories</span>
+            <span class="keyword-chip">Adaptive Attacks</span>
+            <span class="keyword-chip">Autonomous Driving</span>
+          </div>
+          <p>Developed AAA attacks that consider the full 3D trajectory of an observer, demonstrating improved success rates (up to 15% for specific classes) over static patches. Introduced risk-based metrics to evaluate attack success probability while accounting for detection likelihood.</p>
+        </article>
+
+        <article class="card">
+          <h2>Key findings and implications</h2>
+          <p class="tagline">Insights into patch attack limitations and design principles for more robust computer vision systems.</p>
+          <p>Identified fundamental cutoff limits in attack effectiveness based on out-of-plane rotation angles. Demonstrated that increasing training distribution support improves invariance to transformations like rotation and looming motion. These results inform both attack development and defense strategies for real-world AI safety.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Interested in adversarial ML research? Reach out at maxlennon7@gmail.com</p>
+    </footer>
+  </div>
+</body>
+</html>

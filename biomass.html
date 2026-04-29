@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Biomass Estimation | Max Lennon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <main class="hero">
+      <div>
+        <a class="button button-secondary" href="index.html">Back to home</a>
+        <h1>Plant Biomass Estimation</h1>
+        <p>
+          Estimating plant biomass from pasture images using deep learning and multi-target regression to support animal forage assessment and ecological monitoring.
+        </p>
+      </div>
+
+      <section class="project-overview">
+        <article class="card">
+          <img class="project-image" src="images\biomass.jpg" alt="Image of plant biomass estimation model output" />
+          <div class="project-details">
+            <h2>Project overview</h2>
+            <p class="tagline">A computer vision workflow that predicts multiple biomass targets from plant imagery using EfficientNet-based feature extraction.</p>
+            <ul>
+              <li>Processed pasture image data for plant growth and biomass signals</li>
+              <li>Built a multi-target regression model for several biomass metrics</li>
+              <li>Focused on transfer learning and model robustness for real-world field data</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Approach</h2>
+          <p class="tagline">Leveraged EfficientNet for high-quality visual features and trained a regression head to estimate plant biomass across multiple outputs.</p>
+          <div class="keywords">
+            <span class="keyword-chip">Deep Learning</span>
+            <span class="keyword-chip">Computer Vision</span>
+            <span class="keyword-chip">EfficientNet</span>
+            <span class="keyword-chip">Regression</span>
+            <span class="keyword-chip">Transfer Learning</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Results</h2>
+          <p class="tagline">Delivered accurate biomass predictions with a model well-suited for downstream pasture management and research workflows.</p>
+          <p>Final evaluation demonstrated strong correlation between predicted and actual biomass measurements while keeping inference efficient enough for practical deployment.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Interested in the full dataset or model design? </p>
+      <a class="button button-primary" href="https://github.com/max-lennon/CSIRO_Image2Biomass">View GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>
