@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Machine Detectives | Max Lennon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <main class="hero">
+      <div>
+        <a class="button button-secondary" href="index.html">Back to home</a>
+        <h1>Machine Detectives</h1>
+        <p>
+          Developing intelligent systems that decide which information to acquire, balancing the cost of gathering data against the benefit of improved predictions.
+        </p>
+      </div>
+
+      <section class="project-overview">
+        <article class="card">
+          <img class="project-image" src="images\afa.png" alt="Active Feature Acquisition workflow diagram" />
+          <div class="project-details">
+            <h2>Project overview</h2>
+            <p class="tagline">A framework for active feature acquisition that learns which features to request on a per-instance basis, minimizing acquisition costs while maintaining prediction accuracy.</p>
+            <ul>
+              <li>Sequential feature acquisition based on instance-specific needs</li>
+              <li>Balances cost of acquiring data with expected prediction improvement</li>
+              <li>Nonparametric oracle-based approach for feature selection decisions</li>
+              <li>Outperforms reinforcement learning and surrogate model alternatives</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>The active feature acquisition problem</h2>
+          <p class="tagline">In many real-world scenarios, not all features are free to acquire.</p>
+          <p>Imagine a healthcare application where diagnosing a patient requires multiple tests—each test costs money, takes time, and carries some risk. The ideal system wouldn't demand every test upfront; instead, it would intelligently ask for just the tests needed to reach a confident diagnosis. Active feature acquisition solves this by deciding, for each individual case, which features to request next, weighing whether the expected improvement in prediction quality justifies the cost of acquisition.</p>
+        </article>
+
+        <article class="card">
+          <h2>Key challenges</h2>
+          <p class="tagline">Previous approaches struggled with fundamental tradeoffs in machine learning.</p>
+          <div class="keywords">
+            <span class="keyword-chip">Sparse Rewards</span>
+            <span class="keyword-chip">Complex Action Spaces</span>
+            <span class="keyword-chip">Multidimensional Distributions</span>
+            <span class="keyword-chip">Joint Feature Dependencies</span>
+          </div>
+          <p>Reinforcement learning methods faced difficulties training policies due to sparse reward signals and complex decision spaces. Surrogate models struggled to capture the intricate, multidimensional conditional distributions needed. Greedy approaches failed to account for how acquiring multiple features together could provide richer information than acquiring them sequentially.</p>
+        </article>
+
+        <article class="card">
+          <h2>The Acquisition Conditioned Oracle (ACO) approach</h2>
+          <p class="tagline">A novel nonparametric method that sidesteps the limitations of prior approaches.</p>
+          <div class="keywords">
+            <span class="keyword-chip">Nonparametric Methods</span>
+            <span class="keyword-chip">Oracle-Based Learning</span>
+            <span class="keyword-chip">Acquisition Conditioning</span>
+            <span class="keyword-chip">Joint Feature Selection</span>
+          </div>
+          <p>The ACO framework uses an oracle-based approach conditioned on the set of acquired features. Rather than modeling complex conditional distributions or training RL policies, it queries an oracle given the current feature set—making acquisition decisions that naturally account for feature dependencies and joint informativeness. This elegant design avoids many of the training difficulties that plagued alternative methods.</p>
+        </article>
+
+        <article class="card">
+          <h2>Results and applications</h2>
+          <p class="tagline">The ACO method demonstrates superior performance across diverse acquisition scenarios.</p>
+          <p>Extensive experiments show the ACO outperforms state-of-the-art active feature acquisition methods for both prediction tasks and general decision-making scenarios. The framework proves particularly valuable in domains like healthcare, where acquisition costs are high and feature dependencies matter—systems that adaptively request only necessary tests save time, money, and reduce patient burden.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Interested in cost-aware machine learning? Reach out at maxlennon7@gmail.com</p>
+    </footer>
+  </div>
+</body>
+</html>
