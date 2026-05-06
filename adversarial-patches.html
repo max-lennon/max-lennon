@@ -10,11 +10,14 @@
   <div class="container">
     <main class="hero">
       <div>
-        <a class="button button-secondary" href="index.html">Back to home</a>
         <h1>Adversarial Patch Attacks</h1>
         <p>
           Research into physically realizable adversarial attacks on computer vision systems, focusing on patch-based perturbations that can fool models in real-world scenarios.
         </p>
+        <div class="cta-group">
+          <a class="button button-secondary" href="index.html">Back to home</a>
+          <a class="button button-primary" href="#papers">View Papers</a>
+        </div>
       </div>
 
       <section class="project-overview">
@@ -68,10 +71,33 @@
           <p>Identified fundamental cutoff limits in attack effectiveness based on out-of-plane rotation angles. Demonstrated that increasing training distribution support improves invariance to transformations like rotation and looming motion. These results inform both attack development and defense strategies for real-world AI safety.</p>
         </article>
       </section>
+
+      <section id="papers" class="project-overview">
+        <article class="card">
+          <div class="project-details">
+            <h2>Papers and preview</h2>
+            <p class="tagline">Review the project papers and PDF previews that document our work on patch robustness, geometric transformation analysis, and adaptive attacks.</p>
+            <div class="pdf-previews">
+              <details class="pdf-preview">
+                <summary>Paper 1: Semi-transparent patch design and scale-aware robustness analysis</summary>
+                <iframe class="pdf-iframe" src="https://arxiv.org/pdf/2005.00656"></iframe>
+              </details>
+              <details class="pdf-preview">
+                <summary>Paper 2: Mean Attack Success over Transformations (mAST) and 3D pose invariance</summary>
+                <iframe class="pdf-iframe" src="https://arxiv.org/pdf/2108.07229"></iframe>
+              </details>
+              <details class="pdf-preview">
+                <summary>Paper 3: Adaptive Active Attacks (AAA) along 3D trajectories</summary>
+                <iframe class="pdf-iframe" src="PDF/WACV23_attack_dynamic.pdf"></iframe>
+              </details>
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
 
     <footer>
-      <p>Interested in adversarial ML research? Reach out at maxlennon7@gmail.com</p>
+      <p>Questions? Reach out at maxlennon7@gmail.com</p>
     </footer>
   </div>
 </body>
